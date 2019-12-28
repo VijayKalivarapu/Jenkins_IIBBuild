@@ -34,7 +34,7 @@ Change History:
 
 	<project name="IIB.Jenkins.build" default="build">
 		<property file="build.properties"/>	
-		 <property name="datadir" value="../../../" />
+		 <property name="datadir" value="../../" />
 		 
 		 <target name="build">
 			<echo message="Building bar.." />
