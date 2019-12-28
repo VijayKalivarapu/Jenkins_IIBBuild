@@ -34,7 +34,7 @@ Change History:
 	<project name="IIB.Build.Automation" default="master.run">
 	<import file="lib/lt_antlib.xml" as="antlib" /> 
 	
-	<project name="IIB.Jenkins.build" default="build">
+	
 
 	<!-- Start logging... -->
 	<!-- Valid log levels: "debug"	"verbose"	"info"	"warning"	"error" -->
@@ -293,6 +293,5 @@ Change History:
 		<logmsg message="Completed applying overrides in IIB archive(BAR) file ${iib.build.target.bar.filename}."
 		/>
 	</target>
-
-
 </project>
+
