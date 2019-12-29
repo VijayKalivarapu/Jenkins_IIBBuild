@@ -40,7 +40,7 @@ Change History:
 			<echo message="Building bar.." />
 			<exec executable="${iib.toolkit}/mqsicrearebar">
 				<arg value="-data" />
-				<arg value="${datadir}" />		
+				<arg value="${iib.woskspace.dir}" />		
 				<arg value="-b" />
 				<arg value="${bar.name}" />
 				<arg value="-a" />
