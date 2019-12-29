@@ -54,10 +54,17 @@ Change History:
 			<echo message="Completed building Broker Archive file - ${bar.name} " />
 
 			<echo message = "Applying Bar Override.."/>
+			<property name="myBarOverride" value="-b ${bar.name} -p  ${properties}" />
+			<exec executable="${iib.mqsi.path}/mqsiapplybaroverride.bat" spawn="false" vmlauncher="false" failonerror="true">
+				<arg line="${myBarOverride}" />
+				
+			<echo message = "Applied  Bar Override.. Completed... "/>
 			
+			<!-- <exec executable="${iib.mqsi.path}/mqsiprofile.cmd" />
 			<exec executable="baroverride.bat">
 				<arg value="${bar.name}" />
-				<arg value="${properties}" />
+				<arg value="${properties}" /> -->
+				
 			</exec>
 			<echo message = "Bar Overriden..."/>
 			<echo message = "Deploying Bar..."/>
