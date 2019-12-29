@@ -68,17 +68,17 @@ Change History:
 				<arg value = "-r" />
 			</exec>
 			
-
 			<echo message = "Applied  Bar Override.. Completed... "/>
 				
-				
-					
-			<echo message = "Deploying Bar..."/>
-			<exec executable="deploycmd.bat">
+			<echo message = "Deploying Bar in to IS..."/>
+			
+			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
+				<arg value = "&amp;" />
+				<arg value ="mqsideploy.bat" />
 				<arg value="${iib.broker}" />
 				<arg value="${iib.server}" />
 				<arg value="${bar.name}" />
 			</exec>	
-		 	<echo message = "Deploying bar ..."/>
+		 	<echo message = "Deployed  bar in to IS..."/>
 		 	</target>
 		</project>
