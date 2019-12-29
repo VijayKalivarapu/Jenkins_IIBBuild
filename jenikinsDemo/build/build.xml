@@ -55,7 +55,8 @@ Change History:
 
 			<echo message = "Applying Bar Override.."/>
 			<property name="myBarOverride" value="-b ${bar.name} -p  ${properties}" />
-			<exec executable="${iib.mqsi.path}/mqsiapplybaroverride.bat" spawn="false" vmlauncher="false" failonerror="true">
+			
+			<exec executable="${iib.mqsi.path}/mqsiapplybaroverride" spawn="false" vmlauncher="false" failonerror="true">
 				<arg line="${myBarOverride}" />
 			</exec>		
 			<echo message = "Applied  Bar Override.. Completed... "/>
