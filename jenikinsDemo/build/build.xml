@@ -57,34 +57,21 @@ Change History:
 			<echo message = "Applying Bar Override.."/>
 			<property name="myBarOverride" value="-b ${bar.name} -p  ${properties}" />
 			
-			<!-- <exec executable="${iib.home}/${MQSI_APPLYBAROVERRIDE}" spawn="false" vmlauncher="false" failonerror="true"> 
-				<arg line="${myBarOverride}" />
-						</exec>	 -->
-			
-			<!-- <exec executable="${iib.mqsi.path}/${MQSI_APPLYBAROVERRIDE}" spawn="false" vmlauncher="false" failonerror="true">
-				<arg line="${myBarOverride}" />
-			</exec>	 -->
-			
-			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false"> </exec>
-			
-			<!-- <exec executable="mqsiapplybaroverride"   resultproperty="exec.returnvalue" spawn="false"> </exec>  -->
-			
-			<exec executable="baroverride.bat">
-				<arg value="${bar.name}" />
-				<arg value="${properties}" />
+						
+			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
+				<arg value = "&amp;" />
+				<arg value = "mqsiapplybaroverride.bat">
+				<arg value = "-b" />
+				<arg value = "${bar.name}" />
+				<arg value = "-p" />
+				<arg value = "${properties}" />
+				<arg value = "-r" />
 			</exec>
 			
-			<!-- <exec executable="${iib.path}/mqsiapplybaroverride" spawn="false" vmlauncher="false" failonerror="true">
-				<arg line="${myBarOverride}" /> </exec> -->
-			
+
 			<echo message = "Applied  Bar Override.. Completed... "/>
 				
-			
-			<!-- <exec executable="${iib.mqsi.path}/mqsiprofile.cmd" />
-				<exec executable="baroverride.bat">
-				<arg line="${myBarOverride}" 
-				<arg value="${bar.name}" />
-				<arg value="${properties}" /> -->
+		
 				
 					
 			<echo message = "Deploying Bar..."/>
