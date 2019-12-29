@@ -38,14 +38,18 @@ Change History:
 		 
 		 <target name="build">
 			<echo message="Building bar.." />
-			<exec executable="${iib.toolkit}/mqsicreatebar.exe" spawn="false">
+			<property name="myParams" value="-data ${iib.woskspace.dir} -b ${bar.name} -a  ${appname} -deployAsSource" />
+			<exec executable="${iib.toolkit}/mqsicreatebar.exe" spawn="false" vmlauncher="false" failonerror="true">
+				<arg line="${myParams}" />
+			<!-- <exec executable="${iib.toolkit}/mqsicreatebar.exe" spawn="false">
 				<arg value="-data" />
 				<arg value="${iib.woskspace.dir}" />		
 				<arg value="-b" />
 				<arg value="${bar.name}" />
 				<arg value="-a" />
 				<arg value="${appname}" />
-				<arg value="-deployAsSource" />
+				<arg value="-deployAsSource" /> -->
+				
 			</exec>
 			<echo message="Completed building Broker Archive file - ${bar.name} " />
 
