@@ -38,7 +38,7 @@ Change History:
 		 
 		 <target name="build">
 			<echo message="Building bar.." />
-			<exec executable="${iib.toolkit}/mqsicrearebar">
+			<exec executable="${iib.toolkit}/mqsicreatebar">
 				<arg value="-data" />
 				<arg value="${iib.woskspace.dir}" />		
 				<arg value="-b" />
