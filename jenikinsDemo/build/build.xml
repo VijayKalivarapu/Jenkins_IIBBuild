@@ -60,7 +60,7 @@ Change History:
 						
 			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
 				<arg value = "&amp;" />
-				<arg value = "mqsiapplybaroverride.bat">
+				<arg value = "mqsiapplybaroverride.bat" />
 				<arg value = "-b" />
 				<arg value = "${bar.name}" />
 				<arg value = "-p" />
@@ -71,7 +71,6 @@ Change History:
 
 			<echo message = "Applied  Bar Override.. Completed... "/>
 				
-		
 				
 					
 			<echo message = "Deploying Bar..."/>
