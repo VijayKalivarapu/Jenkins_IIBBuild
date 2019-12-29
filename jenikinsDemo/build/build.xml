@@ -35,6 +35,7 @@ Change History:
 	<project name="IIB.Jenkins.build" default="build">
 		<property file="build.properties"/>	
 		 <property name="datadir" value="../../" />
+		 <property name="MQSI_APPLYBAROVERRIDE" value="mqsiapplybaroverride.bat"></property>
 		 
 		 <target name="build">
 			<echo message="Building bar.." />
@@ -56,7 +57,9 @@ Change History:
 			<echo message = "Applying Bar Override.."/>
 			<property name="myBarOverride" value="-b ${bar.name} -p  ${properties}" />
 			
-			<exec executable="${iib.mqsi.path}/mqsiapplybaroverride" spawn="false" vmlauncher="false" failonerror="true">
+			<exec executable="${iib.home}/$MQSI_APPLYBAROVERRIDE" spawn="false" vmlauncher="false" failonerror="true">
+			
+			<exec executable="${iib.mqsi.path}/$MQSI_APPLYBAROVERRIDE" spawn="false" vmlauncher="false" failonerror="true">
 				<arg line="${myBarOverride}" />
 			</exec>		
 			<echo message = "Applied  Bar Override.. Completed... "/>
