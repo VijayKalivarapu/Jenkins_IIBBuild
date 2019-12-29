@@ -74,7 +74,7 @@ Change History:
 			
 			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
 				<arg value = "&amp;" />
-				<arg value ="mqsideploy.bat" />
+				<arg value ="mqsideployscript.bat" />
 				<arg value="${iib.broker}" />
 				<arg value="${iib.server}" />
 				<arg value="${bar.name}" />
