@@ -38,7 +38,7 @@ Change History:
 		 
 		 <target name="build">
 			<echo message="Building bar.." />
-			<exec executable="${iib.toolkit}/mqsicreatebar">
+			<exec executable="${iib.toolkit}/mqsicreatebar.exe" spawn="false">
 				<arg value="-data" />
 				<arg value="${iib.woskspace.dir}" />		
 				<arg value="-b" />
@@ -47,6 +47,8 @@ Change History:
 				<arg value="${appname}" />
 				<arg value="-deployAsSource" />
 			</exec>
+			<echo message="Completed building Broker Archive file - ${bar.name} " />
+
 			<echo message = "Bar Builded..."/>
 			<echo message = "Applying Bar Override.."/>
 			<exec executable="baroverride.bat">
