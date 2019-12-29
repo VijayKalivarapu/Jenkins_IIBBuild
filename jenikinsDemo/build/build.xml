@@ -61,9 +61,13 @@ Change History:
 				<arg line="${myBarOverride}" />
 						</exec>	 -->
 			
-			<exec executable="${iib.mqsi.path}/${MQSI_APPLYBAROVERRIDE}" spawn="false" vmlauncher="false" failonerror="true">
+			<!-- <exec executable="${iib.mqsi.path}/${MQSI_APPLYBAROVERRIDE}" spawn="false" vmlauncher="false" failonerror="true">
 				<arg line="${myBarOverride}" />
-			</exec>		
+			</exec>	 -->
+
+			<exec executable="${iib.toolkit}/mqsiapplybaroverride" spawn="false" vmlauncher="false" failonerror="true">
+				<arg line="${myBarOverride}" />
+			
 			<echo message = "Applied  Bar Override.. Completed... "/>
 			
 			<!-- <exec executable="${iib.mqsi.path}/mqsiprofile.cmd" />
