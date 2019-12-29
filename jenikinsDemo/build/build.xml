@@ -53,8 +53,8 @@ Change History:
 			</exec>
 			<echo message="Completed building Broker Archive file - ${bar.name} " />
 
-			<echo message = "Bar Builded..."/>
 			<echo message = "Applying Bar Override.."/>
+			
 			<exec executable="baroverride.bat">
 				<arg value="${bar.name}" />
 				<arg value="${properties}" />
