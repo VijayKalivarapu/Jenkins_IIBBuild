@@ -75,7 +75,8 @@ Change History:
 			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
 				<arg value = "&amp;" />
 				<arg value ="mqsideployscript.bat" />
-				<arg value = "-n" />
+				<!-- <arg value = "-n" /> -->
+				
 				<arg value="${integrationNodeName}" />
 				<arg value = "-e" />
 				<arg value="${integrationServerName}" />
