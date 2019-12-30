@@ -70,12 +70,12 @@ Change History:
 			
 			<echo message = "Applied  Bar Override.. Completed... "/>
 			
-			<echo message =  "*********Delete resources in  IS***********" />
+			<!-- <echo message =  "*********Delete resources in  IS***********" />
 			
 			<exec executable="${iib.path}/mqsiprofile.cmd"  resultproperty="exec.returnvalue" spawn="false" failonerror="true"> 
 				<arg value = "&amp;" />
 				<arg value ="mqsideployscript.bat" />
-				<!-- <arg value = "-n" /> -->
+				<!-- <arg value = "-n" /> 
 				<arg value="${integrationNodeName}" />
 				<arg value = "-e" />
 				<arg value="${integrationServerName}" />
@@ -84,7 +84,7 @@ Change History:
 				<arg value = "-w" />
 				<arg value="600" />
 			</exec>	
-		 	<echo message = "************ Clear the IS **********"/>
+		 	<echo message = "************ Clear the IS **********"/>  -->
 			
 				
 			<echo message = "Deploys  Bar in to IS..."/>
