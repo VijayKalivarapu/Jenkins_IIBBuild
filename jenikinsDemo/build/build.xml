@@ -80,7 +80,7 @@ Change History:
 				<arg value = "-e" />
 				<arg value="${integrationServerName}" />
 				<arg value = "-d" />
-				<arg value="${bar.name}" />
+				<arg value="${appname}" />
 				<arg value = "-w" />
 				<arg value="600" />
 			</exec>	
